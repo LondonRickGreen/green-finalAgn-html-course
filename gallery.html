@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="styles/styles.css" />
+
+    <!-- Font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/6b5e2af7bf.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Jquery Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Add icon -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+
+    <!-- Title -->
+    <title>Rick Green - Final Assignment - Gallery</title>
+
+    <!-- JavaScript Panel Settings Above the NAV -->
+    <script>
+      $(document).ready(function () {
+        $("#flip").click(function () {
+          $("#panel").fadeToggle(2000);
+        });
+      });
+    </script>
+    <style>
+      #panel,
+      #flip {
+        padding: 2px;
+        text-align: center;
+        background-color: #95ae5d;
+        color: #fff;
+        border: none;
+      }
+
+      #panel {
+        padding: 25px;
+        display: none;
+      }
+    </style>
+
+    <style>
+      .img {
+        width: 35px;
+        border-radius: 25px;
+        float: left;
+        margin-left: 10px;
+      }
+
+      .hello {
+        font-weight: 400;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- JavaScript dropdown panel -->
+    <div
+      id="flip"
+      style="
+        color: black;
+        font-weight: bold;
+        font-size: 18px;
+        background-color: rgb(149, 174, 93);
+      "
+    >
+      <h1>Click to open and close my Welcome Message</h1>
+    </div>
+    <div id="panel" style="color: black; font-weight: bold; font-size: 22px">
+      Welcome to Rick Green's website, feel free to browse the content that I
+      have posted below
+    </div>
+
+    <!-- Nav -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ricknav">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="dropdown">
+          <a
+            class="btn btn-secondary dropdown-toggle"
+            href="#"
+            role="button"
+            id="dropdownMenuLink"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Navigation
+          </a>
+
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li>
+              <a class="dropdown-item" href="index.html">Home</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="aboutMe.html">About Me</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="contactMe.html">Contact Me</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="pricing.html">Pricing and Info</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="calculator.html"
+                >JavaScript Calculator</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="https://www.linkedin.com/in/LondonRickGreen"
+                target="_blank"
+                >LinkedIn</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="aboutMe.html"
+                >About Me</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contactMe.html">Contact Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pricing.html">Pricing and Info</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://www.linkedin.com/in/LondonRickGreen"
+                target="_blank"
+                >LinkedIn</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="menu-right ml-auto">
+        <ul class="navbar-nav">
+          <li class="mav-item">
+            <a class="navbar-brand" href="gallery.html">Photos for Sale</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Gallery -->
+    <section class="gallery gallery-caption fwh-slide fwh-slide-gallery">
+      <h2 id="Gallery">Gallery</h2>
+      <!-- <a class="btn btn-success" href="#" role="button">Home</a> -->
+      <div class="row">
+        <div class="gallery-col">
+          <h2 style="font-size: 22px; font-weight: bold">
+            Rick Green's Gallery
+          </h2>
+          <p style="font-size: 18px">
+            Welcome to my picture gallery. Each digital picture was taken by me
+            over the course of several years while using different styles of
+            cameras. I have collected many photos from across South Western
+            Ontario. There is so much to see and do here.
+          </p>
+        </div>
+        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+          <img
+            src="images/Floating_Away-1920x909.jpg"
+            class="w-100 shadow-1-strong rounded mb-4"
+            alt="Floating Away"
+          />
+
+          <img
+            src="images/Calm-Lake-Erie-1920x909.jpg"
+            class="w-100 shadow-1-strong rounded mb-4"
+            alt="Calm Lake Erie"
+          />
+        </div>
+
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <img
+            src="images/Deep_Blue_Water-1920x909.jpg"
+            class="w-100 shadow-1-strong rounded mb-4"
+            alt="Deep Blue Water"
+          />
+
+          <img
+            src="images/Lone_Seagull-1920x909.jpg"
+            class="w-100 shadow-1-strong rounded mb-4"
+            alt="Lone Seagull"
+          />
+        </div>
+
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <img
+            src="images/Sunset_Over_Water-1920x909.jpg"
+            class="w-100 shadow-1-strong rounded mb-4"
+            alt="Sunset Over Water"
+          />
+
+          <img
+            src="images/Flooded_Dock-1920x909.jpg"
+            class="w-100 shadow-1-strong rounded mb-4"
+            alt="Flooded Dock"
+          />
+        </div>
+        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+          <img
+            src="images/Frog-1920x909.jpg"
+            class="w-100 shadow-1-strong rounded mb-4"
+            alt="Frog"
+          />
+
+          <img
+            src="images/Geese-and-Herons-1920x909.jpg"
+            class="w-100 shadow-1-strong rounded mb-4"
+            alt="Geese and Heron"
+          />
+        </div>
+
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <img
+            src="images/Marsh-1920x909.jpg"
+            class="w-100 shadow-1-strong rounded mb-4"
+            alt="Marsh"
+          />
+
+          <img
+            src="images/Pair-of-Geese-1920x909.jpg"
+            class="w-100 shadow-1-strong rounded mb-4"
+            alt="Pair of Geese"
+          />
+        </div>
+
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <img
+            src="images/Thick-Marsh-1920x909.jpg"
+            class="w-100 shadow-1-strong rounded mb-4"
+            alt="Thick Marsh"
+          />
+
+          <img
+            src="images/Big-Creek-National-Wildlife-Area-1920x909.jpg"
+            class="w-100 shadow-1-strong rounded mb-4"
+            alt="Big Creek National Wildlife Area"
+          />
+        </div>
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <img
+            src="images/Marsh-2-1920x909.jpg"
+            class="w-100 shadow-1-strong rounded mb-4"
+            alt="Marsh 2"
+          />
+
+          <img
+            src="images/Yellow-Flower-On-Lilipad-1920x909.jpg"
+            class="w-100 shadow-1-strong rounded mb-4"
+            alt="Lilipad with Yellow Flower"
+          />
+        </div>
+
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <img
+            src="images/Yellow-Flower-On-Lilipad-2-1920x909.jpg"
+            class="w-100 shadow-1-strong rounded mb-4"
+            alt="Another Lilipad with Yellow Flower"
+          />
+
+          <img
+            src="images/Young-Muskrat-1920x909.jpg"
+            class="w-100 shadow-1-strong rounded mb-4"
+            alt="Young Muskrat"
+          />
+        </div>
+
+        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+          <img
+            src="images/What-A-View-From-LongPoint-1920x909.jpg"
+            class="w-100 shadow-1-strong rounded mb-4"
+            alt="What A View From LongPoint"
+          />
+
+          <img
+            src="images/Roots-1920x909.jpg"
+            class="w-100 shadow-1-strong rounded mb-4"
+            alt="Pair of Geese"
+          />
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
